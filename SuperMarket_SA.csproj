@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A17DADA6-7A9C-4821-8400-B2A62AD92001}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>SuperMarket_SA</RootNamespace>
+    <AssemblyName>SuperMarket_SA</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>packages\BouncyCastle.Cryptography.2.2.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Enums.NET, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7ea1c1650d506225, processorArchitecture=MSIL">
+      <HintPath>packages\Enums.NET.4.0.1\lib\net45\Enums.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=1.3.3.11, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>packages\SharpZipLib.1.3.3\lib\net45\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Numerics, Version=4.15.0.0, Culture=neutral, PublicKeyToken=cd8b63ad3d691a37, processorArchitecture=MSIL">
+      <HintPath>packages\MathNet.Numerics.Signed.4.15.0\lib\net461\MathNet.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=2.3.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IO.RecyclableMemoryStream.2.3.2\lib\net462\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.Core, Version=2.6.2.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>packages\NPOI.2.6.2\lib\net472\NPOI.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.6.2.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>packages\NPOI.2.6.2\lib\net472\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.6.2.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>packages\NPOI.2.6.2\lib\net472\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.6.2.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>packages\NPOI.2.6.2\lib\net472\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="PCD_CodEnigma">
+      <HintPath>..\Proyecto Prueba 2\Librerias\PCD_CodEnigma.dll</HintPath>
+    </Reference>
+    <Reference Include="PCD_ColorFull">
+      <HintPath>..\Proyecto Prueba 2\Librerias\PCD_ColorFull.dll</HintPath>
+    </Reference>
+    <Reference Include="PCD_EVENT_DATA">
+      <HintPath>..\Proyecto Prueba 2\Librerias\PCD_EVENT_DATA.dll</HintPath>
+    </Reference>
+    <Reference Include="PCD_INOUT_INFO">
+      <HintPath>..\Proyecto Prueba 2\Librerias\PCD_INOUT_INFO.dll</HintPath>
+    </Reference>
+    <Reference Include="PCD_ScreemDisplay">
+      <HintPath>..\Proyecto Prueba 2\Librerias\PCD_ScreemDisplay.dll</HintPath>
+    </Reference>
+    <Reference Include="SixLabors.Fonts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d998eea7b14cab13, processorArchitecture=MSIL">
+      <HintPath>packages\SixLabors.Fonts.1.0.0\lib\netstandard2.0\SixLabors.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="SixLabors.ImageSharp, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d998eea7b14cab13, processorArchitecture=MSIL">
+      <HintPath>packages\SixLabors.ImageSharp.2.1.4\lib\net472\SixLabors.ImageSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.AccessControl.6.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Xml, Version=6.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Xml.6.0.1\lib\net461\System.Security.Cryptography.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding.CodePages, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Encoding.CodePages.5.0.0\lib\net461\System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clases\BDState.cs" />
+    <Compile Include="Clases\BoxProduct.cs" />
+    <Compile Include="Clases\FUNCTION.cs" />
+    <Compile Include="Clases\PasswordData.cs" />
+    <Compile Include="Clases\Producto.cs" />
+    <Compile Include="Clases\StockProduct.cs" />
+    <Compile Include="Clases\Sucursal.cs" />
+    <Compile Include="Clases\SucursalGain.cs" />
+    <Compile Include="Clases\TypeProduct.cs" />
+    <Compile Include="Clases\Usuario.cs" />
+    <Compile Include="FileOpen\FDGanancia.cs" />
+    <Compile Include="FileOpen\FDProducto.cs" />
+    <Compile Include="FileOpen\FDStockProduct.cs" />
+    <Compile Include="FileOpen\FDSucursal.cs" />
+    <Compile Include="FileOpen\FDTypeProduct.cs" />
+    <Compile Include="FileOpen\FDUsuario.cs" />
+    <Compile Include="Proceso\MAIN.cs" />
+    <Compile Include="Proceso\PR01.cs" />
+    <Compile Include="Proceso\PR02.cs" />
+    <Compile Include="Proceso\PR03.cs" />
+    <Compile Include="Proceso\PR04.cs" />
+    <Compile Include="Proceso\PR05.cs" />
+    <Compile Include="Proceso\PR06.cs" />
+    <Compile Include="Proceso\PR07.cs" />
+    <Compile Include="Proceso\PR08.cs" />
+    <Compile Include="Proceso\PR09.cs" />
+    <Compile Include="Proceso\PR10.cs" />
+    <Compile Include="Proceso\PR11.cs" />
+    <Compile Include="Proceso\PR12.cs" />
+    <Compile Include="Proceso\PR13.cs" />
+    <Compile Include="Proceso\PR14.cs" />
+    <Compile Include="Proceso\PR15.cs" />
+    <Compile Include="Proceso\PR16.cs" />
+    <Compile Include="Proceso\PR17.cs" />
+    <Compile Include="Proceso\PR18.cs" />
+    <Compile Include="Proceso\PR19.cs" />
+    <Compile Include="Proceso\PR20.cs" />
+    <Compile Include="Proceso\PR21.cs" />
+    <Compile Include="Proceso\PR22.cs" />
+    <Compile Include="Proceso\PR23.cs" />
+    <Compile Include="Proceso\PR24.cs" />
+    <Compile Include="Proceso\PR25.cs" />
+    <Compile Include="Proceso\PR26.cs" />
+    <Compile Include="Proceso\PR27.cs" />
+    <Compile Include="Proceso\PR28.cs" />
+    <Compile Include="Proceso\PR29.cs" />
+    <Compile Include="Proceso\PR30.cs" />
+    <Compile Include="Proceso\PR31.cs" />
+    <Compile Include="Proceso\PR32.cs" />
+    <Compile Include="Proceso\PR33.cs" />
+    <Compile Include="Proceso\PR34.cs" />
+    <Compile Include="Proceso\PR35.cs" />
+    <Compile Include="Proceso\PR36.cs" />
+    <Compile Include="Proceso\PR37.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SubProceso\SUP00.cs" />
+    <Compile Include="SubProceso\SUP01.cs" />
+    <Compile Include="SubProceso\SUP02.cs" />
+    <Compile Include="SubProceso\SUP03.cs" />
+    <Compile Include="SubProceso\SUP04.cs" />
+    <Compile Include="SubProceso\SUP05.cs" />
+    <Compile Include="SubProceso\SUP06.cs" />
+    <Compile Include="SubProceso\SUP07.cs" />
+    <Compile Include="SubProceso\SUP08.cs" />
+    <Compile Include="SubProceso\SUP09.cs" />
+    <Compile Include="SubProceso\SUP10.cs" />
+    <Compile Include="SubProceso\SUP11.cs" />
+    <Compile Include="SubProceso\SUP12.cs" />
+    <Compile Include="SubProceso\SUP13.cs" />
+    <Compile Include="SubProceso\SUP14.cs" />
+    <Compile Include="SubProceso\SUP15.cs" />
+    <Compile Include="SubProceso\SUP16.cs" />
+    <Compile Include="SubProceso\SUP17.cs" />
+    <Compile Include="SubProceso\SUP18.cs" />
+    <Compile Include="SubProceso\SUP19.cs" />
+    <Compile Include="SubProceso\SUP20.cs" />
+    <Compile Include="SubProceso\SUP21.cs" />
+    <Compile Include="SubProceso\SUP22.cs" />
+    <Compile Include="SubProceso\SUP23.cs" />
+    <Compile Include="SubProceso\SUP24.cs" />
+    <Compile Include="SubProceso\SUP25.cs" />
+    <Compile Include="SubProceso\SUP26.cs" />
+    <Compile Include="SubProceso\SUP27.cs" />
+    <Compile Include="SubProceso\SUP28.cs" />
+    <Compile Include="SubProceso\SUP29.cs" />
+    <Compile Include="SubProceso\SUP30.cs" />
+    <Compile Include="SubProceso\SUP31.cs" />
+    <Compile Include="SubProceso\SUP32.cs" />
+    <Compile Include="SubProceso\SUP33.cs" />
+    <Compile Include="SubProceso\SUP34.cs" />
+    <Compile Include="SubProceso\SUP35.cs" />
+    <Compile Include="SubProceso\SUP36.cs" />
+    <Compile Include="SubProceso\SUP37.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
